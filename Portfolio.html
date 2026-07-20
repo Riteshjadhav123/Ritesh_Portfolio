@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Ritesh Jadhav, a Data Science & AI Engineering student specializing in Large Language Models (LLMs), Prompt Engineering, and scalable automation.">
+    <title>Ritesh Jadhav | AI Engineer & Data Scientist</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <style>
+        body { font-family: 'Outfit', sans-serif; background-color: #050814; color: #f8fafc; overflow-x: hidden; }
+        .glass-card { background: rgba(15, 23, 42, 0.4); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.05); }
+        .text-gradient { background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .bg-gradient-custom { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
+        .hover-card { transition: all 0.3s ease; }
+        .hover-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px -10px rgba(79, 172, 254, 0.3); border-color: rgba(79, 172, 254, 0.4); }
+        #vanta-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100vh; z-index: -1; opacity: 0.6; }
+        .skill-tag { background: rgba(79, 172, 254, 0.1); border: 1px solid rgba(79, 172, 254, 0.2); transition: all 0.3s ease; }
+        .skill-tag:hover { background: rgba(79, 172, 254, 0.2); border-color: rgba(79, 172, 254, 0.5); transform: translateY(-2px); }
+        ::-webkit-scrollbar { width: 8px; } ::-webkit-scrollbar-track { background: #050814; } ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 4px; } ::-webkit-scrollbar-thumb:hover { background: #334155; }
+    </style>
+</head>
+<body class="antialiased selection:bg-[#4facfe] selection:text-white">
+    <div id="vanta-bg"></div>
+    
+    <nav class="fixed w-full z-50 glass-card transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center"><span class="text-2xl font-bold text-gradient tracking-tight">Ritesh.</span></div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-300 hover:text-white transition font-medium">Home</a>
+                    <a href="#skills" class="text-gray-300 hover:text-white transition font-medium">Skills</a>
+                    <a href="#experience" class="text-gray-300 hover:text-white transition font-medium">Experience</a>
+                    <a href="#projects" class="text-gray-300 hover:text-white transition font-medium">Projects</a>
+                    <a href="#certifications" class="text-gray-300 hover:text-white transition font-medium">Certificates</a>
+                    <a href="#contact" class="text-gray-300 hover:text-white transition font-medium">Contact</a>
+                    <a href="Ritesh Jadhav_.pdf" target="_blank" class="bg-gradient-custom text-white px-6 py-2.5 rounded-full font-medium hover:shadow-[0_0_15px_rgba(79,172,254,0.5)] transition-all">Resume</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-gray-300 hover:text-white"><i data-feather="menu"></i></button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden glass-card absolute w-full py-4 px-6 border-t border-gray-800">
+            <a href="#home" class="block py-3 text-gray-300 hover:text-white">Home</a>
+            <a href="#skills" class="block py-3 text-gray-300 hover:text-white">Skills</a>
+            <a href="#experience" class="block py-3 text-gray-300 hover:text-white">Experience</a>
+            <a href="#projects" class="block py-3 text-gray-300 hover:text-white">Projects</a>
+            <a href="#certifications" class="block py-3 text-gray-300 hover:text-white">Certificates</a>
+            <a href="#contact" class="block py-3 text-gray-300 hover:text-white">Contact</a>
+            <a href="Ritesh Jadhav_.pdf" target="_blank" class="block py-3 text-[#4facfe] font-medium">View Resume</a>
+        </div>
+    </nav>
+
+    <section id="home" class="min-h-screen flex items-center relative pt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="flex flex-col-reverse md:flex-row items-center justify-between gap-12">
+                <div class="md:w-3/5 text-center md:text-left" data-aos="fade-up">
+                    <div class="inline-flex items-center px-4 py-1.5 rounded-full border border-[#4facfe]/30 bg-[#4facfe]/10 text-[#4facfe] text-sm font-medium mb-6 backdrop-blur-sm">
+                        <span class="flex h-2 w-2 rounded-full bg-[#4facfe] mr-2 animate-pulse"></span>
+                        Available for Opportunities
+                    </div>
+                    <h1 class="text-5xl md:text-7xl font-extrabold mb-4 leading-tight">
+                        Hi, I'm <br/><span class="text-gradient">Ritesh Jadhav</span>
+                    </h1>
+                    <h2 class="text-2xl md:text-3xl font-medium text-gray-400 mb-6">
+                        Data Science & AI Engineering Student
+                    </h2>
+                    <p class="text-lg text-gray-300 mb-10 max-w-2xl mx-auto md:mx-0 leading-relaxed">
+                        Focused on high-impact data analysis and scalable automation. Experienced in optimizing <span class="text-[#4facfe] font-semibold">Large Language Models (LLMs)</span> through human-aligned frameworks and high-fidelity prompt design.
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
+                        <a href="#projects" class="bg-gradient-custom text-white px-8 py-3.5 rounded-full font-semibold hover:shadow-[0_0_20px_rgba(79,172,254,0.4)] transition-all transform hover:-translate-y-1 text-center">
+                            View My Work
+                        </a>
+                        <a href="#contact" class="glass-card text-white px-8 py-3.5 rounded-full font-semibold hover:bg-white/10 transition-all text-center flex items-center justify-center gap-2">
+                            <i data-feather="mail" class="w-5 h-5"></i> Let's Connect
+                        </a>
+                    </div>
+                    <div class="flex items-center justify-center md:justify-start gap-6 mt-12">
+                        <a href="https://github.com/Riteshjadhav123" target="_blank" class="text-gray-400 hover:text-white transition transform hover:scale-110"><i data-feather="github" class="w-7 h-7"></i></a>
+                        <a href="https://linkedin.com/in/ritesh-jadhav-89446631b" target="_blank" class="text-gray-400 hover:text-[#0077b5] transition transform hover:scale-110"><i data-feather="linkedin" class="w-7 h-7"></i></a>
+                    </div>
+                </div>
+                <div class="md:w-2/5 flex justify-center mb-10 md:mb-0" data-aos="fade-left" data-aos-delay="200">
+                    <div class="relative group">
+                        <div class="absolute -inset-1 bg-gradient-to-r from-[#4facfe] to-[#00f2fe] rounded-full blur opacity-60 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+                        <img src="a.jpg" alt="Ritesh Jadhav" class="relative rounded-full w-64 h-64 md:w-[22rem] md:h-[22rem] object-cover border-4 border-slate-900 shadow-2xl">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-24 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-4">Technical <span class="text-gradient">Skills</span></h2>
+                <div class="w-24 h-1.5 bg-gradient-custom mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="glass-card hover-card p-8 rounded-2xl" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-[#4facfe]/10 w-14 h-14 rounded-xl flex items-center justify-center mb-6">
+                        <i data-feather="cpu" class="text-[#4facfe] w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">AI & LLM Optimization</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag px-3 py-1 text-sm rounded-full">Prompt Engineering</span>
+                        <span class="skill-tag px-3 py-1 text-sm rounded-full">RLHF</span>
+                        <span class="skill-tag px-3 py-1 text-sm rounded-full">SFT Dataset Curation</span>
+                        <span class="skill-tag px-3 py-1 text-sm rounded-full">Model Evaluation</span>
+                    </div>
+                </div>
+
+                <div class="glass-card hover-card p-8 rounded-2xl" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-[#4facfe]/10 w-14 h-14 rounded-xl flex items-center justify-center mb-6">
+                        <i data-feather="code" class="text-[#4facfe] w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Programming Languages</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag px-3 py-1 text-sm rounded-full">Python</span>
+                        <span class="skill-tag px-3 py-1 text-sm rounded-full">SQL</span>
+                        <span class="skill-tag px-3 py-1 text-sm rounded-full">Java</span>
+                        <span class="skill-tag px-3 py-1 text-sm rounded-full">C++</span>
+                        <span class="skill-tag px-3 py-1 text-sm rounded-full">NumPy</span>
+                        <span class="skill-tag px-3 py-1 text-sm rounded-full">Pandas</span>
+                    </div>
+                </div>
+
+                <div class="glass-card hover-card p-8 rounded-2xl" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-[#4facfe]/10 w-14 h-14 rounded-xl flex items-center justify-center mb-6">
+                        <i data-feather="bar-chart-2" class="text-[#4facfe] w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Data Analytics & BI</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag px-3 py-1 text-sm rounded-full">EDA</span>
+                        <span class="skill-tag px-3 py-1 text-sm rounded-full">ETL Pipelines</span>
+                        <span class="skill-tag px-3 py-1 text-sm rounded-full">Tableau</span>
+                        <span class="skill-tag px-3 py-1 text-sm rounded-full">Power BI</span>
+                        <span class="skill-tag px-3 py-1 text-sm rounded-full">Advanced Excel</span>
+                    </div>
+                </div>
+
+                <div class="glass-card hover-card p-8 rounded-2xl" data-aos="fade-up" data-aos-delay="400">
+                    <div class="bg-[#4facfe]/10 w-14 h-14 rounded-xl flex items-center justify-center mb-6">
+                        <i data-feather="eye" class="text-[#4facfe] w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Machine Learning</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag px-3 py-1 text-sm rounded-full">YOLOV5</span>
+                        <span class="skill-tag px-3 py-1 text-sm rounded-full">CNNs</span>
+                        <span class="skill-tag px-3 py-1 text-sm rounded-full">OpenCV</span>
+                        <span class="skill-tag px-3 py-1 text-sm rounded-full">MediaPipe</span>
+                    </div>
+                </div>
+                
+                <div class="glass-card hover-card p-8 rounded-2xl md:col-span-2 lg:col-span-1" data-aos="fade-up" data-aos-delay="500">
+                    <div class="bg-[#4facfe]/10 w-14 h-14 rounded-xl flex items-center justify-center mb-6">
+                        <i data-feather="cloud" class="text-[#4facfe] w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">DevOps & Cloud</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag px-3 py-1 text-sm rounded-full">AWS Fundamentals</span>
+                        <span class="skill-tag px-3 py-1 text-sm rounded-full">Docker</span>
+                        <span class="skill-tag px-3 py-1 text-sm rounded-full">Git/GitHub</span>
+                        <span class="skill-tag px-3 py-1 text-sm rounded-full">CI/CD</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-24 relative z-10 bg-slate-900/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-4">Experience & <span class="text-gradient">Education</span></h2>
+                <div class="w-24 h-1.5 bg-gradient-custom mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Experience -->
+                <div data-aos="fade-right">
+                    <h3 class="text-2xl font-bold mb-8 flex items-center gap-3">
+                        <i data-feather="briefcase" class="text-[#4facfe]"></i> Professional Experience
+                    </h3>
+                    <div class="glass-card hover-card p-8 rounded-2xl border-l-4 border-l-[#4facfe]">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h4 class="text-xl font-bold text-white">LLM Post Training Intern</h4>
+                                <p class="text-[#4facfe] font-medium">Ethara AI (Green Rider Technology LLP)</p>
+                            </div>
+                            <span class="bg-slate-800 text-gray-300 text-xs px-3 py-1 rounded-full whitespace-nowrap">Feb 2026 - Jun 2026</span>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-4"><i data-feather="map-pin" class="w-3 h-3 inline"></i> Gurugram, India (Remote)</p>
+                        <ul class="space-y-3 text-gray-300 text-sm list-disc pl-4">
+                            <li>Curated high-fidelity prompt-response datasets for Supervised Fine-Tuning (SFT) to enhance model reasoning.</li>
+                            <li>Executed Reinforcement Learning from Human Feedback (RLHF) workflows for aligning outputs with human intent.</li>
+                            <li>Benchmarked model performance and refined prompt templates in HITL pipelines to mitigate hallucinations.</li>
+                            <li>Collaborated on ground-truth standards and labeling taxonomies for LLM optimization.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Education -->
+                <div data-aos="fade-left">
+                    <h3 class="text-2xl font-bold mb-8 flex items-center gap-3">
+                        <i data-feather="book-open" class="text-[#4facfe]"></i> Education
+                    </h3>
+                    <div class="glass-card hover-card p-8 rounded-2xl border-l-4 border-l-[#4facfe] mb-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h4 class="text-xl font-bold text-white">B.Tech in AI & Data Science</h4>
+                                <p class="text-[#4facfe] font-medium">Sanjivani University</p>
+                            </div>
+                            <span class="bg-slate-800 text-gray-300 text-xs px-3 py-1 rounded-full whitespace-nowrap">2024 - 2028</span>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-4"><i data-feather="map-pin" class="w-3 h-3 inline"></i> Kopargaon, India</p>
+                        <div class="bg-slate-800/50 rounded-lg p-4 mb-4">
+                            <span class="text-gray-400 text-sm">CGPA:</span> <span class="text-white font-bold text-lg ml-2">7.91 / 10.0</span>
+                        </div>
+                        <p class="text-gray-300 text-sm">
+                            <span class="font-semibold text-white">Relevant Coursework:</span> Probability & Statistics, Data Structures, Database Management, Machine Learning.
+                        </p>
+                    </div>
+
+                    <h3 class="text-xl font-bold mb-4 flex items-center gap-3 mt-10">
+                        <i data-feather="award" class="text-[#4facfe]"></i> Achievements
+                    </h3>
+                    <ul class="space-y-4 text-gray-300 text-sm">
+                        <li class="flex gap-3">
+                            <i data-feather="check-circle" class="text-[#4facfe] w-5 h-5 flex-shrink-0"></i>
+                            <span><strong class="text-white">Published Research:</strong> "Digital Immortality: Preserving Human Consciousness through AI," JETIR Journal.</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <i data-feather="check-circle" class="text-[#4facfe] w-5 h-5 flex-shrink-0"></i>
+                            <span><strong class="text-white">Scholarship:</strong> Merit-based scholarship by Sanjivani University.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-24 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-4">Featured <span class="text-gradient">Projects</span></h2>
+                <div class="w-24 h-1.5 bg-gradient-custom mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Project 1 -->
+                <div class="glass-card hover-card rounded-2xl overflow-hidden flex flex-col h-full" data-aos="fade-up">
+                    <div class="p-8 flex-grow">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-2xl font-bold text-white leading-tight">Intelligent Surveillance & Night Patrolling Drone</h3>
+                            <a href="#" class="text-gray-400 hover:text-[#4facfe] transition"><i data-feather="github"></i></a>
+                        </div>
+                        <p class="text-[#4facfe] text-sm font-medium mb-4">Advanced Research</p>
+                        <p class="text-gray-300 text-sm mb-6 leading-relaxed">
+                            Designed a 40+ page technical framework for an autonomous drone system utilizing YOLOv5 for real-time threat detection and autonomous navigation logic. Conducted theoretical performance analysis for night-vision environments.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span class="skill-tag px-3 py-1 text-xs rounded-full">YOLOv5</span>
+                            <span class="skill-tag px-3 py-1 text-xs rounded-full">Computer Vision</span>
+                            <span class="skill-tag px-3 py-1 text-xs rounded-full">Autonomous Navigation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="glass-card hover-card rounded-2xl overflow-hidden flex flex-col h-full" data-aos="fade-up" data-aos-delay="100">
+                    <div class="p-8 flex-grow">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-2xl font-bold text-white leading-tight">MeetMate - AI-Powered Productivity Pipeline</h3>
+                            <a href="#" class="text-gray-400 hover:text-[#4facfe] transition"><i data-feather="github"></i></a>
+                        </div>
+                        <p class="text-[#4facfe] text-sm font-medium mb-4">Full Stack AI</p>
+                        <p class="text-gray-300 text-sm mb-6 leading-relaxed">
+                            Built a full-stack data pipeline using Whisper AI and Gemini API to convert meeting audio/video into structured actionable insights automatically.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span class="skill-tag px-3 py-1 text-xs rounded-full">Whisper AI</span>
+                            <span class="skill-tag px-3 py-1 text-xs rounded-full">Gemini API</span>
+                            <span class="skill-tag px-3 py-1 text-xs rounded-full">Data Pipeline</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="glass-card hover-card rounded-2xl overflow-hidden flex flex-col h-full" data-aos="fade-up" data-aos-delay="200">
+                    <div class="p-8 flex-grow">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-2xl font-bold text-white leading-tight">AI Sign Language Interpreter & Gesture HCI Suite</h3>
+                            <a href="#" class="text-gray-400 hover:text-[#4facfe] transition"><i data-feather="github"></i></a>
+                        </div>
+                        <p class="text-[#4facfe] text-sm font-medium mb-4">Computer Vision</p>
+                        <p class="text-gray-300 text-sm mb-6 leading-relaxed">
+                            Built a real-time computer vision system using CNNs to translate hand gestures into text and speech with 98% accuracy.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span class="skill-tag px-3 py-1 text-xs rounded-full">CNNs</span>
+                            <span class="skill-tag px-3 py-1 text-xs rounded-full">Real-time Processing</span>
+                            <span class="skill-tag px-3 py-1 text-xs rounded-full">HCI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="glass-card hover-card rounded-2xl overflow-hidden flex flex-col h-full" data-aos="fade-up" data-aos-delay="300">
+                    <div class="p-8 flex-grow">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-2xl font-bold text-white leading-tight">Government-Scale Data Analysis</h3>
+                            <a href="#" class="text-gray-400 hover:text-[#4facfe] transition"><i data-feather="github"></i></a>
+                        </div>
+                        <p class="text-[#4facfe] text-sm font-medium mb-4">UIDAI Aadhaar Hackathon Entry</p>
+                        <p class="text-gray-300 text-sm mb-6 leading-relaxed">
+                            Processed and cleaned large-scale UIDAI datasets using Python. Developed automated reporting dashboards to translate complex data into actionable policy insights.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span class="skill-tag px-3 py-1 text-xs rounded-full">Python</span>
+                            <span class="skill-tag px-3 py-1 text-xs rounded-full">Data Engineering</span>
+                            <span class="skill-tag px-3 py-1 text-xs rounded-full">Dashboards</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications" class="py-24 relative z-10 bg-slate-900/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-4">My <span class="text-gradient">Certifications</span></h2>
+                <div class="w-24 h-1.5 bg-gradient-custom mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Cert 1 -->
+                <div class="glass-card hover-card p-6 rounded-2xl flex flex-col items-center text-center" data-aos="fade-up">
+                    <div class="bg-[#4facfe]/10 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="database" class="text-[#4facfe] w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">HackerRank</h3>
+                    <p class="text-[#4facfe] text-sm font-medium">SQL (Certified)</p>
+                </div>
+                
+                <!-- Cert 2 -->
+                <div class="glass-card hover-card p-6 rounded-2xl flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-[#4facfe]/10 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="bar-chart-2" class="text-[#4facfe] w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">IBM</h3>
+                    <p class="text-[#4facfe] text-sm font-medium">Data Visualization & DevOps</p>
+                </div>
+                
+                <!-- Cert 3 -->
+                <div class="glass-card hover-card p-6 rounded-2xl flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-[#4facfe]/10 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="cpu" class="text-[#4facfe] w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Intel</h3>
+                    <p class="text-[#4facfe] text-sm font-medium">AI For All</p>
+                </div>
+                
+                <!-- Cert 4 -->
+                <div class="glass-card hover-card p-6 rounded-2xl flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-[#4facfe]/10 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="message-square" class="text-[#4facfe] w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">NASSCOM</h3>
+                    <p class="text-[#4facfe] text-sm font-medium">Generative AI Fluency</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-4">Get In <span class="text-gradient">Touch</span></h2>
+                <div class="w-24 h-1.5 bg-gradient-custom mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="glass-card rounded-3xl p-8 md:p-12 max-w-4xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-6 text-white">Let's connect!</h3>
+                        <p class="text-gray-400 mb-8">Feel free to reach out for collaborations, opportunities, or just to say hi.</p>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-center gap-4 group">
+                                <div class="w-12 h-12 rounded-full bg-[#4facfe]/10 flex items-center justify-center text-[#4facfe] group-hover:bg-[#4facfe] group-hover:text-white transition-all">
+                                    <i data-feather="mail"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-400">Email</p>
+                                    <a href="mailto:riteshsjadhav302@gmail.com" class="text-white font-medium hover:text-[#4facfe] transition">riteshsjadhav302@gmail.com</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center gap-4 group">
+                                <div class="w-12 h-12 rounded-full bg-[#4facfe]/10 flex items-center justify-center text-[#4facfe] group-hover:bg-[#4facfe] group-hover:text-white transition-all">
+                                    <i data-feather="phone"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-400">Phone</p>
+                                    <a href="tel:+919270039696" class="text-white font-medium hover:text-[#4facfe] transition">+91 9270039696</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center gap-4 group">
+                                <div class="w-12 h-12 rounded-full bg-[#4facfe]/10 flex items-center justify-center text-[#4facfe] group-hover:bg-[#4facfe] group-hover:text-white transition-all">
+                                    <i data-feather="map-pin"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-400">Location</p>
+                                    <p class="text-white font-medium">Rahuri, Maharashtra, India</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <form class="space-y-5">
+                            <div>
+                                <input type="text" placeholder="Your Name" class="w-full bg-slate-800/50 border border-slate-700 rounded-xl px-5 py-3 text-white focus:outline-none focus:border-[#4facfe] transition">
+                            </div>
+                            <div>
+                                <input type="email" placeholder="Your Email" class="w-full bg-slate-800/50 border border-slate-700 rounded-xl px-5 py-3 text-white focus:outline-none focus:border-[#4facfe] transition">
+                            </div>
+                            <div>
+                                <textarea rows="4" placeholder="Your Message" class="w-full bg-slate-800/50 border border-slate-700 rounded-xl px-5 py-3 text-white focus:outline-none focus:border-[#4facfe] transition resize-none"></textarea>
+                            </div>
+                            <button type="button" class="w-full bg-gradient-custom text-white font-bold rounded-xl px-5 py-4 hover:shadow-[0_0_20px_rgba(79,172,254,0.4)] active:scale-95 transition-all transform hover:-translate-y-1">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="border-t border-white/10 py-8 relative z-10 glass-card mt-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-gray-400 text-sm">© 2026 Ritesh Jadhav. All rights reserved.</p>
+            <div class="flex space-x-6">
+                <a href="https://github.com/Riteshjadhav123" target="_blank" class="text-gray-400 hover:text-white transition"><i data-feather="github" class="w-5 h-5"></i></a>
+                <a href="https://linkedin.com/in/ritesh-jadhav-89446631b" target="_blank" class="text-gray-400 hover:text-white transition"><i data-feather="linkedin" class="w-5 h-5"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
+        feather.replace();
+
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.style.background = 'rgba(15, 23, 42, 0.8)';
+            } else {
+                nav.style.background = 'rgba(15, 23, 42, 0.4)';
+            }
+        });
+
+        VANTA.NET({
+            el: "#vanta-bg",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0x4facfe,
+            backgroundColor: 0x050814,
+            points: 12.00,
+            maxDistance: 22.00,
+            spacing: 18.00
+        });
+    </script>
+</body>
+</html>
