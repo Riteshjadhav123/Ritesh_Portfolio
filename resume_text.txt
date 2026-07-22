@@ -1,0 +1,34 @@
+RITESH SANTOSH JADHAV 
++91 9270039696 | riteshsjadhav302@gmail.com | linkedin.com/in/ritesh-jadhav-89446631b | https://github.com/Riteshjadhav123 | 
+Rahuri, Maharashtra, India  
+PROFESSIONAL SUMMARY  
+Artificial Intelligence & Data Science undergraduate with hands-on experience in LLM post-training, RLHF, SFT 
+dataset curation, prompt engineering, Python, SQL, machine learning, and data analytics. Passionate about 
+building scalable AI and data-driven solutions. 
+TECHNICAL SKILLS  
+Programming: Python, SQL, Java, C++ 
+AI & ML: Prompt Engineering, RLHF, SFT Dataset Curation, CNN, YOLOv5, OpenCV, MediaPipe 
+Data: Pandas, NumPy, Scikit-learn, EDA, ETL, Feature Engineering 
+Visualization: Tableau, Power BI, IBM Cognos, Advanced Excel 
+Tools: Git, GitHub, Docker, MySQL,  
+EXPERIENCE  
+Ethara AI (Green Rider Technology ) | LLM Post-Training Intern | Feb 2026 – Jun 2026  
+ Curated high-quality SFT datasets and evaluated LLM responses using RLHF to improve reasoning, instruction following, 
+and response quality.  
+ Collaborated on prompt engineering, model evaluation, and human-in-the-loop workflows to optimize AI model 
+performance.  
+EDUCATION  
+Sanjivani University, Kopargaon 
+B.Tech – Artificial Intelligence & Data Science (2024–2028)                                                                     CGPA: 7.91/10 
+PROJECTS  
+AI Sign Language Interpreter  
+ Built a CNN-based real-time gesture recognition system with 96% accuracy using OpenCV and MediaPipe.  
+ Converted hand gestures into text and speech.  
+MeetMate – AI Productivity Assistant  
+ Developed an AI meeting assistant using Whisper AI and Gemini API.  
+ Generated meeting summaries, action items, and structured insights.  
+RESEARCH & ACHIEVEMENTS  
+ Published research: "Digital Immortality: Preserving Human Consciousness through AI" (JETIR).  
+ Merit Scholarship recipient at Sanjivani University.  
+CERTIFICATIONS  
+HackerRank SQL | IBM Data Visualization | IBM DevOps Fundamentals | Intel AI for All | NASSCOM Generative AI Fluency 
