@@ -143,17 +143,55 @@
             color: #f8fafc;
         }
 
-        /* Fluid Typography & Responsive Auto-Sizing */
+        /* Device-Fit & Fluid Typography across Mobile, Tablet, Laptop, and Desktop */
         .hero-title-fluid {
-            font-size: clamp(2.2rem, 5vw, 4.2rem) !important;
-            line-height: 1.1 !important;
+            font-size: clamp(2.0rem, 5vw, 4.2rem) !important;
+            line-height: 1.15 !important;
         }
         .hero-sub-fluid {
-            font-size: clamp(1.05rem, 2.4vw, 1.7rem) !important;
+            font-size: clamp(1.0rem, 2.4vw, 1.7rem) !important;
         }
         .avatar-img-fluid {
-            width: clamp(160px, 22vw, 260px) !important;
-            height: clamp(160px, 22vw, 260px) !important;
+            width: clamp(150px, 22vw, 260px) !important;
+            height: clamp(150px, 22vw, 260px) !important;
+        }
+
+        @media (max-width: 576px) {
+            .container, .container-fluid {
+                padding-left: 0.85rem !important;
+                padding-right: 0.85rem !important;
+            }
+            .hero-title-fluid {
+                font-size: clamp(1.75rem, 8vw, 2.5rem) !important;
+            }
+            .hero-sub-fluid {
+                font-size: clamp(0.9rem, 4.2vw, 1.25rem) !important;
+            }
+            .avatar-img-fluid {
+                width: clamp(140px, 48vw, 210px) !important;
+                height: clamp(140px, 48vw, 210px) !important;
+            }
+        }
+
+        /* Navbar Breakpoint: Mobile & Tablet (< 1024px) ALWAYS show top-right 3-line list panel button */
+        @media (max-width: 1024px) {
+            .nav-links-horizontal {
+                display: none !important;
+            }
+            .nav-list-toggler {
+                display: inline-flex !important;
+            }
+        }
+        @media (min-width: 1025px) {
+            .nav-links-horizontal {
+                display: flex !important;
+            }
+            .nav-list-toggler {
+                display: none !important;
+            }
+            #mobileNavDropdown {
+                display: none !important;
+            }
         }
 
         #vanta-bg {
@@ -305,26 +343,6 @@
             cursor: pointer;
             transition: all 0.25s ease;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-        }
-        /* Navbar Auto-Fit Breakpoint (Switches to 3-line list panel ONLY when links no longer fit) */
-        @media (max-width: 990px) {
-            .nav-links-horizontal {
-                display: none !important;
-            }
-            .nav-list-toggler {
-                display: inline-flex !important;
-            }
-        }
-        @media (min-width: 991px) {
-            .nav-links-horizontal {
-                display: flex !important;
-            }
-            .nav-list-toggler {
-                display: none !important;
-            }
-            #mobileNavDropdown {
-                display: none !important;
-            }
         }
         .nav-link {
             color: #cbd5e1 !important;
