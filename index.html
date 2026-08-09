@@ -206,10 +206,10 @@
             transition: opacity 0.5s ease;
         }
 
-        /* Balanced Mobile & Tablet Background Opacity */
+        /* Balanced Faded Background Opacity for Mobile & Tablet Devices */
         @media (max-width: 1024px) {
             #vanta-bg {
-                opacity: 0.45 !important;
+                opacity: 0.38 !important;
             }
         }
 
@@ -1669,7 +1669,7 @@
             }
         }
 
-        // Dynamic Interactive 3D Vanta Neural Network Background (Balanced Mobile & Desktop)
+        // Dynamic Interactive 3D Vanta Neural Network Background (Slightly Decreased Mobile Density)
         function initVantaBg() {
             if (typeof VANTA !== 'undefined' && VANTA.NET) {
                 const isMobile = window.innerWidth <= 1024;
@@ -1681,12 +1681,12 @@
                     minHeight: 200.00,
                     minWidth: 200.00,
                     scale: 1.00,
-                    scaleMobile: 0.85,
+                    scaleMobile: 0.75,
                     color: 0x4facfe,
                     backgroundColor: 0x050814,
-                    points: isMobile ? 8.00 : 11.00,
-                    maxDistance: isMobile ? 18.00 : 22.00,
-                    spacing: isMobile ? 18.00 : 16.00
+                    points: isMobile ? 6.50 : 11.00,
+                    maxDistance: isMobile ? 16.00 : 22.00,
+                    spacing: isMobile ? 22.00 : 16.00
                 });
             } else {
                 setTimeout(initVantaBg, 150);
