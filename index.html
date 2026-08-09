@@ -410,23 +410,29 @@
     </header>
 
     <main class="container-fluid px-0">
-        <!-- Hero Section (Reordered Layout: Name -> Profile Picture -> Typewriter Role -> Bio -> Buttons -> Terminal Widget) -->
+        <!-- Hero Section (Desktop: Side-by-side 2-column | Mobile: Stacked Name -> Photo -> Typewriter -> Bio) -->
         <section id="home" class="min-vh-100 d-flex align-items-center pt-5 pb-5 bg-gradient-glow">
-            <div class="container my-auto pt-4">
-                <div class="row justify-content-center text-center">
+            <div class="container my-auto pt-4 pt-lg-5">
+                <div class="row align-items-center g-4 g-lg-5">
                     
-                    <div class="col-12 col-lg-8 d-flex flex-column align-items-center" data-aos="fade-up">
+                    <!-- Left Column (Desktop Content) / Main Content -->
+                    <div class="col-12 col-lg-7 text-center text-lg-start" data-aos="fade-right">
+                        
+                        <!-- Role Badge (Desktop Only) -->
+                        <div class="d-none d-lg-inline-flex align-items-center px-3 py-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-400 text-xs font-semibold text-uppercase tracking-wider mb-4 backdrop-blur-md">
+                            <span class="flex h-2 w-2 rounded-full bg-cyan-400 me-2 animate-ping"></span>
+                            AI & Data Science Engineer
+                        </div>
+
                         <!-- 1st: Heading -->
                         <h1 class="font-extrabold text-white tracking-tight mb-2 hero-title-fluid">
-                            Hi, I'm <span class="text-gradient-cyan">Ritesh Jadhav</span>
+                            Hi, I'm <br class="d-none d-sm-inline"/>
+                            <span class="text-gradient-cyan">Ritesh Jadhav</span>
                         </h1>
 
-                        <!-- 2nd: Profile Avatar Photo (Comes right after Name!) -->
-                        <div class="position-relative group my-3">
-                            <!-- Glowing Aura Ring -->
+                        <!-- Mobile Only Profile Avatar Photo (Comes right after Name on Mobile Devices < 992px!) -->
+                        <div class="d-lg-none position-relative group my-3 mx-auto" style="width: fit-content;">
                             <div class="position-absolute top-0 start-0 w-100 h-100 bg-gradient-to-r from-cyan-500 via-purple-500 to-cyan-400 rounded-full blur-xl opacity-70 group-hover:opacity-100 transition duration-1000 animate-pulse"></div>
-                            
-                            <!-- Profile Container with Rotating Cyber Rings -->
                             <div class="position-relative rounded-full p-2 bg-slate-900 border-2 border-slate-700 shadow-2xl avatar-wrapper">
                                 <div class="cyber-ring ring-1"></div>
                                 <div class="cyber-ring ring-2"></div>
@@ -434,19 +440,19 @@
                             </div>
                         </div>
 
-                        <!-- 3rd: Dynamic Typewriter Role System (Includes AI & Data Science Engineer) -->
-                        <h2 class="font-medium text-gray-300 mb-3 d-flex justify-content-center align-items-center hero-sub-fluid" style="min-height: 40px;">
+                        <!-- Dynamic Typewriter Role System -->
+                        <h2 class="font-medium text-gray-300 mb-3 d-flex justify-content-center justify-content-lg-start align-items-center hero-sub-fluid" style="min-height: 40px;">
                             <span id="typewriter-text" class="text-cyan-300 font-mono"></span>
                             <span class="typewriter-cursor"></span>
                         </h2>
 
-                        <!-- 4th: Bio Description Paragraph -->
-                        <p class="lead text-gray-300 mb-4 max-w-2xl mx-auto font-light text-base sm:text-lg">
+                        <!-- Bio Description Paragraph -->
+                        <p class="lead text-gray-300 mb-4 max-w-2xl mx-auto mx-lg-0 font-light text-base sm:text-lg">
                             Versatile <strong class="text-cyan-400 font-semibold">AI & LLM Engineer</strong>, <strong class="text-purple-400 font-semibold">Data Analyst</strong>, and <strong class="text-emerald-400 font-semibold">Web Developer</strong>. Specialized in RLHF & SFT curation, predictive machine learning, SQL analytics pipelines, and interactive web applications.
                         </p>
 
                         <!-- Quick Multi-Role Focus Pills -->
-                        <div class="d-flex flex-wrap justify-content-center gap-2 mb-4 font-mono text-xs">
+                        <div class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-2 mb-4 font-mono text-xs">
                             <span class="glass-panel px-3 py-1.5 rounded-lg border-cyan-500/20 text-cyan-300 d-flex align-items-center gap-1.5">
                                 <i data-feather="cpu" class="w-3.5 h-3.5"></i> AI Engineer
                             </span>
@@ -459,7 +465,7 @@
                         </div>
 
                         <!-- Hero Action Button & Social Connections -->
-                        <div class="d-flex flex-column flex-sm-row justify-content-center align-items-center gap-3">
+                        <div class="d-flex flex-column flex-sm-row justify-content-center justify-content-lg-start align-items-center gap-3">
                             <a href="#projects" class="bg-gradient-primary text-white px-5 py-3 rounded-full font-bold shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 transition-all text-center text-decoration-none d-flex align-items-center justify-content-center gap-2">
                                 <span>Explore Work</span>
                                 <i data-feather="arrow-right" class="w-4 h-4"></i>
@@ -479,9 +485,23 @@
                                 </a>
                             </div>
                         </div>
+                    </div>
+
+                    <!-- Right Column (Desktop Only Photo Container & AI Shell Terminal Widget) -->
+                    <div class="col-12 col-lg-5 d-flex flex-column align-items-center" data-aos="fade-left" data-aos-delay="200">
+                        
+                        <!-- Desktop Profile Image Container -->
+                        <div class="d-none d-lg-block position-relative group mb-4">
+                            <div class="position-absolute top-0 start-0 w-100 h-100 bg-gradient-to-r from-cyan-500 via-purple-500 to-cyan-400 rounded-full blur-xl opacity-70 group-hover:opacity-100 transition duration-1000 animate-pulse"></div>
+                            <div class="position-relative rounded-full p-2 bg-slate-900 border-2 border-slate-700 shadow-2xl avatar-wrapper">
+                                <div class="cyber-ring ring-1"></div>
+                                <div class="cyber-ring ring-2"></div>
+                                <img src="profile_cropped.jpg" alt="Ritesh Jadhav" class="img-fluid rounded-full object-cover shadow-2xl avatar-img-fluid">
+                            </div>
+                        </div>
 
                         <!-- Interactive AI Shell Terminal Widget -->
-                        <div class="w-100 glass-panel rounded-3xl p-3 border-slate-800 font-mono text-xs shadow-2xl mt-4" style="max-width: 440px;">
+                        <div class="w-100 glass-panel rounded-3xl p-3 border-slate-800 font-mono text-xs shadow-2xl mt-4 mt-lg-0" style="max-width: 440px;">
                             <div class="d-flex align-items-center justify-content-between pb-2 mb-2 border-bottom border-slate-800">
                                 <div class="d-flex align-items-center gap-1.5">
                                     <span class="w-2.5 h-2.5 rounded-circle bg-rose-500"></span>
@@ -494,7 +514,7 @@
                             <div id="terminal-output" class="text-gray-300 font-mono text-[11px] mb-2" style="min-height: 68px; max-height: 100px; overflow-y: auto;">
                                 <span class="text-cyan-400">> AI Shell Ready.</span> Click an agent command to inspect capabilities:
                             </div>
-                            <div class="d-flex flex-wrap gap-1.5">
+                            <div class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-1.5">
                                 <button onclick="runTerminalCmd('ai')" class="btn btn-sm bg-slate-800 hover:bg-slate-700 text-cyan-300 border border-cyan-500/30 text-[10px] py-1 px-2 rounded-lg">
                                     > prompt_audit
                                 </button>
@@ -509,6 +529,7 @@
                                 </button>
                             </div>
                         </div>
+
                     </div>
 
                 </div>
