@@ -203,6 +203,14 @@
             z-index: 0;
             opacity: 0.65;
             pointer-events: none;
+            transition: opacity 0.5s ease;
+        }
+
+        /* Faded Soft Subtle Background for Mobile & Tablet Devices */
+        @media (max-width: 1024px) {
+            #vanta-bg {
+                opacity: 0.22 !important;
+            }
         }
 
         header, main, section, footer {
@@ -1661,23 +1669,24 @@
             }
         }
 
-        // Dynamic Interactive 3D Vanta Neural Network Background (Original Ritesh Portfolio Style)
+        // Dynamic Interactive 3D Vanta Neural Network Background (Soft Mobile Faded Tuning)
         function initVantaBg() {
             if (typeof VANTA !== 'undefined' && VANTA.NET) {
+                const isMobile = window.innerWidth <= 1024;
                 VANTA.NET({
                     el: "#vanta-bg",
-                    mouseControls: true,
-                    touchControls: true,
+                    mouseControls: !isMobile,
+                    touchControls: false,
                     gyroControls: false,
                     minHeight: 200.00,
                     minWidth: 200.00,
                     scale: 1.00,
-                    scaleMobile: 1.00,
+                    scaleMobile: 0.65,
                     color: 0x4facfe,
                     backgroundColor: 0x050814,
-                    points: 11.00,
-                    maxDistance: 22.00,
-                    spacing: 16.00
+                    points: isMobile ? 5.00 : 11.00,
+                    maxDistance: isMobile ? 14.00 : 22.00,
+                    spacing: isMobile ? 26.00 : 16.00
                 });
             } else {
                 setTimeout(initVantaBg, 150);
