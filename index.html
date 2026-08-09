@@ -306,11 +306,24 @@
             transition: all 0.25s ease;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
         }
-        /* Ensure Navbar links show cleanly on desktop */
-        @media (min-width: 992px) {
-            .navbar-expand-lg .navbar-collapse {
+        /* Navbar Auto-Fit Breakpoint (Switches to 3-line list panel ONLY when links no longer fit) */
+        @media (max-width: 990px) {
+            .nav-links-horizontal {
+                display: none !important;
+            }
+            .nav-list-toggler {
+                display: inline-flex !important;
+            }
+        }
+        @media (min-width: 991px) {
+            .nav-links-horizontal {
                 display: flex !important;
-                flex-basis: auto !important;
+            }
+            .nav-list-toggler {
+                display: none !important;
+            }
+            #mobileNavDropdown {
+                display: none !important;
             }
         }
         .nav-link {
@@ -343,8 +356,8 @@
                     <span class="text-lg font-bold tracking-tight text-white">Ritesh<span class="text-cyan-400">.ai</span></span>
                 </a>
 
-                <!-- Desktop Navigation Links (Visible on Large Desktop Screens >= 1200px) -->
-                <nav class="d-none d-xl-flex align-items-center justify-content-end gap-1 ms-auto">
+                <!-- Horizontal Navigation Links (Shown whenever there is enough screen space) -->
+                <nav class="nav-links-horizontal align-items-center justify-content-end gap-1 ms-auto">
                     <a class="nav-link px-2 py-1 text-xs sm:text-sm font-semibold d-inline-flex align-items-center gap-1 text-gray-200 hover:text-cyan-400 text-decoration-none transition" href="#home">🏠 Home</a>
                     <a class="nav-link px-2 py-1 text-xs sm:text-sm font-semibold d-inline-flex align-items-center gap-1 text-gray-200 hover:text-cyan-400 text-decoration-none transition" href="#about">👤 About</a>
                     <a class="nav-link px-2 py-1 text-xs sm:text-sm font-semibold d-inline-flex align-items-center gap-1 text-gray-200 hover:text-cyan-400 text-decoration-none transition" href="#skills">⚡ Skills</a>
@@ -355,15 +368,15 @@
                     <button data-bs-toggle="modal" data-bs-target="#resumeModal" class="btn btn-sm bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 hover:bg-cyan-500/30 px-3 py-1 rounded-full text-xs font-semibold d-inline-flex align-items-center gap-1 ms-1 transition">📄 Resume</button>
                 </nav>
 
-                <!-- Top Right Responsive 3-Line List Toggler Button (Visible on Small / Split-Screen Windows < 1200px) -->
-                <button class="d-xl-none ms-auto btn p-1.5 border-0 text-cyan-400 bg-cyan-500/10 rounded-xl hover:bg-cyan-500/20" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNavDropdown" aria-controls="mobileNavDropdown" aria-expanded="false" aria-label="Toggle navigation list panel">
+                <!-- Top Right 3-Line List Toggler Button (Appears ONLY when links cannot fit on screen) -->
+                <button class="nav-list-toggler ms-auto btn p-1.5 border-0 text-cyan-400 bg-cyan-500/10 rounded-xl hover:bg-cyan-500/20" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNavDropdown" aria-controls="mobileNavDropdown" aria-expanded="false" aria-label="Toggle navigation list panel">
                     <i data-feather="menu" class="w-6 h-6"></i>
                 </button>
 
             </div>
 
-            <!-- Responsive Collapsible List Panel for Mobile / Split Screen Windows -->
-            <div class="collapse d-xl-none mt-2 glass-panel rounded-3xl p-3 border-slate-800 shadow-2xl" id="mobileNavDropdown">
+            <!-- Responsive Collapsible List Panel -->
+            <div class="collapse mt-2 glass-panel rounded-3xl p-3 border-slate-800 shadow-2xl" id="mobileNavDropdown">
                 <nav class="d-flex flex-column gap-1 text-start">
                     <a class="nav-link px-3 py-2 text-sm font-semibold text-gray-200 hover:text-cyan-400 hover:bg-slate-800/60 rounded-xl transition" href="#home" onclick="closeMobileNav()">🏠 Home</a>
                     <a class="nav-link px-3 py-2 text-sm font-semibold text-gray-200 hover:text-cyan-400 hover:bg-slate-800/60 rounded-xl transition" href="#about" onclick="closeMobileNav()">👤 About</a>
