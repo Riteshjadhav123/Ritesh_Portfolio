@@ -952,10 +952,11 @@
                 </div>
 
                 <!-- Project Filters -->
-                <div class="d-flex justify-center gap-2 mb-4" data-aos="fade-up">
+                <div class="d-flex flex-wrap justify-center gap-2 mb-4" data-aos="fade-up">
                     <button onclick="filterProjects('all')" class="proj-tab-btn active px-4 py-2 rounded-full text-xs font-semibold glass-panel bg-cyan-500/20 border-cyan-500/50 text-cyan-300">All Projects</button>
                     <button onclick="filterProjects('ai')" class="proj-tab-btn px-4 py-2 rounded-full text-xs font-semibold glass-panel border-slate-800 text-gray-400 hover:text-white">AI / LLM Pipelines</button>
                     <button onclick="filterProjects('cv')" class="proj-tab-btn px-4 py-2 rounded-full text-xs font-semibold glass-panel border-slate-800 text-gray-400 hover:text-white">Computer Vision</button>
+                    <button onclick="filterProjects('ml')" class="proj-tab-btn px-4 py-2 rounded-full text-xs font-semibold glass-panel border-slate-800 text-gray-400 hover:text-white">ML & Data Analytics</button>
                 </div>
 
                 <!-- Projects Grid -->
@@ -969,7 +970,7 @@
                                     <span class="px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 text-xs font-mono font-semibold">
                                         LLM & Speech Pipeline
                                     </span>
-                                    <a href="https://github.com/Riteshjadhav123" target="_blank" rel="noopener" class="text-gray-400 hover:text-cyan-400 transition" aria-label="GitHub Repository">
+                                    <a href="https://github.com/Riteshjadhav123/MeetMate" target="_blank" rel="noopener" class="text-gray-400 hover:text-cyan-400 transition" aria-label="GitHub Repository">
                                         <i data-feather="github" class="w-5 h-5"></i>
                                     </a>
                                 </div>
@@ -1004,7 +1005,7 @@
                                     <span class="px-3 py-1 rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/30 text-xs font-mono font-semibold">
                                         Computer Vision & HCI
                                     </span>
-                                    <a href="https://github.com/Riteshjadhav123" target="_blank" rel="noopener" class="text-gray-400 hover:text-purple-400 transition" aria-label="GitHub Repository">
+                                    <a href="https://github.com/Riteshjadhav123/AI-Sign-Language-Interpreter" target="_blank" rel="noopener" class="text-gray-400 hover:text-purple-400 transition" aria-label="GitHub Repository">
                                         <i data-feather="github" class="w-5 h-5"></i>
                                     </a>
                                 </div>
@@ -1024,6 +1025,76 @@
                                 </div>
 
                                 <button onclick="openProjectModal('signlang')" class="w-100 py-2.5 rounded-xl bg-slate-800/80 hover:bg-purple-500/20 text-purple-400 border border-purple-500/30 text-xs font-semibold transition-all d-flex align-items-center justify-content-center gap-2">
+                                    <span>View Technical Details & Architecture</span>
+                                    <i data-feather="arrow-right" class="w-4 h-4"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: Real-Time Emotion-Based Music Recommendation System -->
+                    <div class="col-12 col-md-6 project-card" data-type="cv" data-aos="fade-up" data-aos-delay="300">
+                        <div class="glass-panel glass-panel-hover rounded-3xl p-4 p-md-5 h-100 d-flex flex-column justify-content-between border-slate-800/80">
+                            <div>
+                                <div class="d-flex justify-between align-items-start mb-3">
+                                    <span class="px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-xs font-mono font-semibold">
+                                        Vision & Emotion AI
+                                    </span>
+                                    <a href="https://github.com/Riteshjadhav123/Real-Time-Emotion-Based-Music-Recommendation-System" target="_blank" rel="noopener" class="text-gray-400 hover:text-emerald-400 transition" aria-label="GitHub Repository">
+                                        <i data-feather="github" class="w-5 h-5"></i>
+                                    </a>
+                                </div>
+
+                                <h3 class="h4 font-bold text-white mb-2">Real-Time Emotion Music Recommendation Engine</h3>
+                                <p class="text-sm text-gray-300 font-light mb-4 leading-relaxed">
+                                    Computer vision and audio recommendation pipeline analyzing webcam video streams to infer user mood via facial expression classification (Keras/OpenCV) and curate real-time dynamic music playlists.
+                                </p>
+                            </div>
+
+                            <div>
+                                <div class="d-flex flex-wrap gap-2 mb-4 font-mono text-xs">
+                                    <span class="px-2.5 py-1 rounded-md bg-slate-800 text-emerald-300">Facial AI</span>
+                                    <span class="px-2.5 py-1 rounded-md bg-slate-800 text-cyan-300">OpenCV</span>
+                                    <span class="px-2.5 py-1 rounded-md bg-slate-800 text-purple-300">Keras</span>
+                                    <span class="px-2.5 py-1 rounded-md bg-slate-800 text-gray-300">Music API</span>
+                                </div>
+
+                                <button onclick="openProjectModal('emotion_music')" class="w-100 py-2.5 rounded-xl bg-slate-800/80 hover:bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-xs font-semibold transition-all d-flex align-items-center justify-content-center gap-2">
+                                    <span>View Technical Details & Architecture</span>
+                                    <i data-feather="arrow-right" class="w-4 h-4"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4: Retail Sales Forecasting Engine -->
+                    <div class="col-12 col-md-6 project-card" data-type="ml" data-aos="fade-up" data-aos-delay="400">
+                        <div class="glass-panel glass-panel-hover rounded-3xl p-4 p-md-5 h-100 d-flex flex-column justify-content-between border-slate-800/80">
+                            <div>
+                                <div class="d-flex justify-between align-items-start mb-3">
+                                    <span class="px-3 py-1 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/30 text-xs font-mono font-semibold">
+                                        Time-Series Predictive ML
+                                    </span>
+                                    <a href="https://github.com/Riteshjadhav123/retail-sales-forecasting" target="_blank" rel="noopener" class="text-gray-400 hover:text-amber-400 transition" aria-label="GitHub Repository">
+                                        <i data-feather="github" class="w-5 h-5"></i>
+                                    </a>
+                                </div>
+
+                                <h3 class="h4 font-bold text-white mb-2">Retail Sales Forecasting & Demand Analytics Engine</h3>
+                                <p class="text-sm text-gray-300 font-light mb-4 leading-relaxed">
+                                    Predictive machine learning time-series model utilizing XGBoost, ARIMA, and Prophet algorithms to forecast store revenue, capture holiday trend seasonality, and optimize inventory supply chains.
+                                </p>
+                            </div>
+
+                            <div>
+                                <div class="d-flex flex-wrap gap-2 mb-4 font-mono text-xs">
+                                    <span class="px-2.5 py-1 rounded-md bg-slate-800 text-amber-300">XGBoost</span>
+                                    <span class="px-2.5 py-1 rounded-md bg-slate-800 text-cyan-300">ARIMA</span>
+                                    <span class="px-2.5 py-1 rounded-md bg-slate-800 text-purple-300">Prophet</span>
+                                    <span class="px-2.5 py-1 rounded-md bg-slate-800 text-gray-300">Scikit-Learn</span>
+                                </div>
+
+                                <button onclick="openProjectModal('sales_forecast')" class="w-100 py-2.5 rounded-xl bg-slate-800/80 hover:bg-amber-500/20 text-amber-400 border border-amber-500/30 text-xs font-semibold transition-all d-flex align-items-center justify-content-center gap-2">
                                     <span>View Technical Details & Architecture</span>
                                     <i data-feather="arrow-right" class="w-4 h-4"></i>
                                 </button>
@@ -1579,6 +1650,14 @@
                 document.getElementById('infoModalTitle').textContent = 'AI Sign Language Interpreter';
                 document.getElementById('infoModalBadge').textContent = 'CNN + MediaPipe + OpenCV';
                 document.getElementById('infoModalBody').textContent = 'Constructed a real-time computer vision system capable of tracking 21 3D hand landmarks via MediaPipe. Hand posture features are fed into a Convolutional Neural Network (CNN) trained to recognize complex gestures with 96% accuracy, instantly emitting corresponding text captions and synthesised audio.';
+            } else if (key === 'emotion_music') {
+                document.getElementById('infoModalTitle').textContent = 'Real-Time Emotion Music Recommendation Engine';
+                document.getElementById('infoModalBadge').textContent = 'Facial Emotion AI + OpenCV + Keras';
+                document.getElementById('infoModalBody').textContent = 'Developed a real-time emotion detection computer vision engine using Keras deep learning models and OpenCV webcam stream capturing. Evaluates facial expressions (happy, sad, neutral, energetic) and dynamically interfaces with music audio APIs to stream matching personalized playlists.';
+            } else if (key === 'sales_forecast') {
+                document.getElementById('infoModalTitle').textContent = 'Retail Sales Forecasting & Demand Analytics Engine';
+                document.getElementById('infoModalBadge').textContent = 'XGBoost + ARIMA + Prophet + Scikit-Learn';
+                document.getElementById('infoModalBody').textContent = 'Engineered a high-precision predictive time-series machine learning model for retail sales forecasting. Integrates XGBoost regression, ARIMA statistical modeling, and Facebook Prophet to analyze historical revenue patterns, holiday demand spikes, and supply chain inventory distribution.';
             }
             infoBsModal.show();
         }
